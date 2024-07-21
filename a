@@ -17,17 +17,30 @@
             object-fit: cover;
             z-index: -1;
         }
+        @import url(https://fonts.googleapis.com/css?family=Khula:700);
+        .console-container {
+            font-family:Khula;
+        }
+        .hidden {
+            opacity:0;
+        }
+        .console-underscore {
+            display:inline-block;
+            position:relative;
+            top:-0.14em;
+            left:10px;
+        }
     </style>
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
 </head>
 
 <body class="h-screen">
 
-        <?php include '../component/header-web.php' ?>
+        <?php include '../component/header-web.php'; ?>
 
     <div class="relative w-full h-full text-white">
         <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop >
@@ -81,4 +94,73 @@
      ?>
     <!-- endfooter -->
 </body>
+<script>
+    // function([string1, string2],target id,[color1,color2])    
+ consoleText(['Make progress.', 'Be creative.', 'Make better.'], 'text',['white','white','white']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
 </html>
+
+<div class="h-screen flex flex-col items-center justify-center">
+    <form action='index.php' method='POST'>
+        <div class="flex flex-col mb-4">
+            <label for="pengirim" class=" mb-2 font-medium text-base md:text-lg lg:text-xl text-white">Pengirim</label>
+            <input type="text" id="pengirim" name="pengirim" placeholder="nama pengirim bisa disamarkan" class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300">
+        </div>
+        <div class="flex flex-col mb-4">
+            <label for="pesan" class="mb-2 font-medium text-base md:text-lg lg:text-xl text-white">Keluhan</label>
+            <textarea type="text" rows="5" id="pesan" name="pesan" placeholder="jangan lupa dengan pesannya.." class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300"></textarea>
+        </div>
+        <div class="mb-4">
+            <button type="submit" name="kirim" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500">Kirim</button>
+        </div>
+    </form>
+</div>

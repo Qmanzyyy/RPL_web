@@ -43,7 +43,7 @@
         <?php include './component/header-index.php'; ?>
 
     <div class="relative w-full h-full text-white">
-        <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop>
+        <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop >
             <source src="Background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -64,6 +64,11 @@
                  </a>
         </div>
     </div>
+     <!-- footer -->
+     <?php 
+        include './component/footer.php'
+     ?>
+    <!-- endfooter -->
 </body>
 <script>
     // function([string1, string2],target id,[color1,color2])    
