@@ -14,7 +14,7 @@ $detail_postingan = query("SELECT * FROM keluhan");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keluhan</title>
     <!-- style -->
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./src/output.css">
     <!-- endstyle -->
 
     <!-- script -->

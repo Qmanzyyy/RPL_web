@@ -1,6 +1,6 @@
 <?php
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
 // mengecek tombol submit sudah di tekan atau belum
 if (isset($_POST["submit"])) {
@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./src/output.css">
     <style>
         #video-background {
             position: absolute;
@@ -86,7 +86,7 @@ if (isset($_POST["submit"])) {
 
      <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>

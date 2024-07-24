@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="./src/output.css">
 
     <style>
         #video-background {
@@ -21,14 +21,14 @@
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
 </head>
 
 <body class="h-screen">
 
 <!-- nav -->
-    <?php include '../component/header-web.php' ?>
+    <?php include './component/header-web.php' ?>
 <!-- endnav -->
 
 <!-- main -->
@@ -79,7 +79,7 @@
 <!-- endmain -->
      <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>

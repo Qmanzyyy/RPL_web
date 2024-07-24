@@ -1,6 +1,6 @@
 <?php 
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
 // mengambil id yang ada pada url
 $id = $_GET["id"];

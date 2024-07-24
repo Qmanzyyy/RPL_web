@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./src/output.css">
     <style>
         #video-background {
             position: absolute;
@@ -27,7 +27,7 @@
 
 <body class="h-screen">
     <!-- header -->
-    <?php include '../component/header-web.php'; ?>
+    <?php include './component/header-web.php'; ?>
     <!-- endheader -->
 
     <!-- main -->
@@ -70,7 +70,7 @@
 
      <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>

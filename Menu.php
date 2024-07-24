@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="./src/output.css">
 
     <style>
         #video-background {
@@ -21,26 +21,26 @@
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
 </head>
 
-<body class="h-screen">
+<body class="h-full">
 
 <!-- nav -->
-    <?php include '../component/header-web.php' ?>
+    <?php include './component/header-web.php' ?>
 <!-- endnav -->
 
 <!-- main -->
     <!-- background -->
     <div class="relative w-full h-full text-white flex flex-col justify-center">
         <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop >
-            <source src="../Background.mp4" type="video/mp4">
+            <source src="./Background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
         <!-- menuwrapper -->
-         <div class="md:mx-40 mx-10">
+         <div class="md:mx-40 mx-10 py-10">
         <!-- home -->
         <div class="grid mb-10 bg-white rounded-md grid-cols-2 p-5 gap-5 mt-10">
         
@@ -128,7 +128,7 @@
 <!-- endmain -->
      <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>

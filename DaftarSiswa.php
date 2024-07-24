@@ -22,7 +22,7 @@ if( isset($_POST["cari"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DaftarSiswa</title>
     <!-- style -->
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./src/output.css">
     <!-- endstyle -->
 
     <!-- script -->
@@ -32,7 +32,7 @@ if( isset($_POST["cari"])){
 <body class="">
     <!-- header -->
      <?php 
-        include '../component/header-web.php';
+        include './component/header-web.php';
      ?>
     <!-- endheader -->
 

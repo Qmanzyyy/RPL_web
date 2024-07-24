@@ -1,7 +1,7 @@
 <!-- php -->
 <?php 
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
 // mengambil data dari url
 $id = $_GET['id'];
@@ -37,10 +37,10 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Mahasiswa</title>
+    <title>Tambah Data Siswa</title>
 
     <!-- stylecss tailwind -->
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./src/output.css">
 
 </head>
 <body>
