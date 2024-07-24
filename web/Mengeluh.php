@@ -1,3 +1,29 @@
+<?php
+// menghubungkan halaman ke functionn-
+require '../function/function.php';
+
+// mengecek tombol submit sudah di tekan atau belum
+if (isset($_POST["submit"])) {
+    // mengecek apakah data berhasil dikirimkan atau tidak
+    if (bahtam($_POST) > 0) {
+        echo "
+        <script>
+            alert('Data Berhasil Di Tambahkan!');
+            document.location.href = 'Keluhan.php';
+        </script>
+        ";
+    }else {
+        echo "
+        <script>
+            alert('Data Berhasil Di Tambahkan!');
+            document.location.href = 'Gagal Di Tambahkan!';
+        </script>
+        ";
+    }
+};
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,17 +66,17 @@
         <!-- endbgvideo -->
         <div class="flex flex-col items-center justify-center h-full backdrop-blur-sm">
             <div class="h-screen flex flex-col items-center justify-center">
-                <form action='index.php' method='POST'>
+                <form action='' method='POST'>
             <div class="flex flex-col mb-4">
                 <label for="pengirim" class=" mb-2 font-medium text-base md:text-lg lg:text-xl text-white">Pengirim</label>
-                <input type="text" id="pengirim" name="pengirim" placeholder="nama pengirim bisa disamarkan" class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300">
+                <input required type="text" id="pengirim" name="pengirim" placeholder="nama pengirim bisa disamarkan" class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300">
             </div>
             <div class="flex flex-col mb-4">
                 <label for="pesan" class="mb-2 font-medium text-base md:text-lg lg:text-xl text-white">Keluhan</label>
-                <textarea type="text" rows="5" id="pesan" name="pesan" placeholder="jangan lupa dengan pesannya.." class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300"></textarea>
+                <textarea type="text" rows="5" id="pesan" name="pesan" placeholder="jangan lupa dengan pesannya.." class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300" required></textarea>
             </div>
             <div class="mb-4">
-                <button type="submit" name="kirim" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500">Kirim</button>
+                <button type="submit" name="submit" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500">Kirim</button>
             </div>
             </form>
             </div>

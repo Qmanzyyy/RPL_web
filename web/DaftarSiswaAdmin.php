@@ -3,7 +3,7 @@
 require '../function/function.php';
 
 // mengambil data dari function query dan menyimpan kedalam $mahasiswa
-$mahasiswa = query("SELECT * FROM XIrpl ORDER BY nama ASC");
+$mahasiswa = query("SELECT * FROM XIrpl");
 
 // tombol pencarian di tekan
 if( isset($_POST["cari"])){
@@ -51,7 +51,7 @@ if( isset($_POST["cari"])){
     <div class="flex flex-col items-center">
 
         <!-- link ke tambah.php -->
-       <!-- <a class="text-blue-500 text-left mt-7" href="tambah.php">Tambahkan Daftar Siswa</a> -->
+       <a class="text-blue-500 text-left mt-7" href="tambah.php">Tambahkan Daftar Siswa</a>
        <!-- end link tambah.php -->
 
        <!-- table -->
@@ -74,7 +74,10 @@ if( isset($_POST["cari"])){
             <p class="border-b-2 border-slate-300 mb-5"><?= $mhs["nama"] ?></p>
             <p class="" for="katakata"><?= $mhs["kelas"] ?></p>
         </div>
+
     </div>
+            <a class="p-1 text-blue-500" href="edit.php?id=<?=$mhs['id']; ?>">edit</a> |
+            <a class="p-1 text-blue-500" href="hapus.php?id=<?=$mhs["id"];?>" onclick="return confirm('Yakin Kah Dek?')">hapus</a>
 </div>
 <?php $i++ ?>
 <?php endforeach;?>

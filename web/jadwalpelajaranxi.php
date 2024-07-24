@@ -20,7 +20,11 @@
     <!-- endheader -->
 
     <!-- main -->
-    <main class="h-lvh flex items-center justify-center">
+    <main class="flex items-center justify-center">
+        <div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-serif text-center mt-10">Jadwal Kelas 11 RPL</h1>
+        <img src="../xirpl.jpeg" alt="">
+        </div>
     </main>
     <!-- endmain -->
 
