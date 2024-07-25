@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
 
     <style>
         #video-background {
@@ -25,7 +25,7 @@
     <!-- endscript -->
 </head>
 
-<body class="h-screen">
+<body class="h-screen bg-[url('BG.jpg')] bg-cover">
 
 <!-- nav -->
     <?php include './component/header-web.php' ?>
@@ -33,12 +33,7 @@
 
 <!-- main -->
     <!-- background -->
-    <div class="relative w-full h-full text-white flex flex-col justify-center">
-        <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop >
-            <source src="../Background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
+    <div class="relative w-full h-full text-white flex flex-col justify-center backdrop-blur-sm">
         <!-- menuwrapper -->
          <div class="md:mx-40 mx-10">
 

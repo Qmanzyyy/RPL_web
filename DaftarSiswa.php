@@ -1,6 +1,6 @@
 <?php 
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
 // mengambil data dari function query dan menyimpan kedalam $mahasiswa
 $mahasiswa = query("SELECT * FROM XIrpl ORDER BY nama ASC");
@@ -22,14 +22,14 @@ if( isset($_POST["cari"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DaftarSiswa</title>
     <!-- style -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
 </head>
-<body class="">
+<body class="bg-gray-800">
     <!-- header -->
      <?php 
         include './component/header-web.php';
@@ -37,7 +37,7 @@ if( isset($_POST["cari"])){
     <!-- endheader -->
 
     <!-- main -->
-    <main class="mx-10">
+    <main class="mx-10 backdrop-blur-sm text-white">
     
     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-serif text-center mt-10">Daftar Siswa</h1>
 

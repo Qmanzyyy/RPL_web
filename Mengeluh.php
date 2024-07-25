@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
     <style>
         #video-background {
             position: absolute;
@@ -46,34 +46,28 @@ if (isset($_POST["submit"])) {
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
      
 </head>
 
 <body class="h-screen">
     <!-- header -->
-    <?php include '../component/header-web.php'; ?>
+    <?php include './component/header-web.php'; ?>
     <!-- endheader -->
 
     <!-- main -->
-    <main class="relative w-full h-full text-white">
-        <!-- bgvideo -->
-        <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop >
-            <source src="../Background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <!-- endbgvideo -->
+    <main class="relative w-full h-full text-white bg-[url('BG.jpg')] bg-cover">
         <div class="flex flex-col items-center justify-center h-full backdrop-blur-sm">
             <div class="h-screen flex flex-col items-center justify-center">
                 <form action='' method='POST'>
             <div class="flex flex-col mb-4">
-                <label for="pengirim" class=" mb-2 font-medium text-base md:text-lg lg:text-xl text-white">Pengirim</label>
-                <input required type="text" id="pengirim" name="pengirim" placeholder="nama pengirim bisa disamarkan" class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300">
+                <label for="pengirim" class=" mb-2 font-medium text-base md:text-lg lg:text-xl text-black">Pengirim</label>
+                <input required type="text" id="pengirim" name="pengirim" placeholder="nama pengirim bisa disamarkan" class="w-full bg-black text-white dark:text-white placeholder:text-white placeholder:text-sm placeholder:dark:text-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300">
             </div>
             <div class="flex flex-col mb-4">
-                <label for="pesan" class="mb-2 font-medium text-base md:text-lg lg:text-xl text-white">Keluhan</label>
-                <textarea type="text" rows="5" id="pesan" name="pesan" placeholder="jangan lupa dengan pesannya.." class="w-full text-gray-900 dark:text-white placeholder:text-gray-600 placeholder:text-sm placeholder:dark:text-white bg-white dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300" required></textarea>
+                <label for="pesan" class="mb-2 font-medium text-base md:text-lg lg:text-xl text-black">Keluhan</label>
+                <textarea type="text" rows="5" id="pesan" name="pesan" placeholder="jangan lupa dengan pesannya.." class="w-full text-white dark:text-white placeholder:text-white placeholder:text-sm placeholder:dark:text-white bg-black dark:bg-gray-400 px-4 py-2 border-white dark:border-gray-800 rounded-md shadow-md focus:outline-none focus:ring focus:ring-blue-200 dark:focus:ring-violet-200 focus:border-blue-300 dark:focus:border-violet-300" required></textarea>
             </div>
             <div class="mb-4">
                 <button type="submit" name="submit" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500">Kirim</button>

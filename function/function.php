@@ -87,8 +87,7 @@ function cari($keyword) {
         return query($query);
 };
 
-// function untuk menambahkan data ke dalam database
-function bahtam($bahtam){
+function bahtam($bahtam) {
     // globalscope $conn
     global $conn;
 
@@ -97,16 +96,15 @@ function bahtam($bahtam){
     $pesan = htmlspecialchars($bahtam["pesan"]);
 
     // menambah data ke database
-    $query = "INSERT INTO keluhan
-                VALUES
-              (null,'$pengirim','$pesan')
-              ";
+    $query = "INSERT INTO keluhan (pengirim, pesan)
+              VALUES ('$pengirim', '$pesan')";
 
     // menambah
-    mysqli_query($conn,$query);
+    mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
-};
+}
+
 
 
 ?>

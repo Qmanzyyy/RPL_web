@@ -1,8 +1,8 @@
 <?php
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
-$detail_postingan = query("SELECT * FROM keluhan");
+$detail_postingan = query("SELECT * FROM keluhan ORDER BY created_at DESC");
 
 ?>
 
@@ -14,24 +14,24 @@ $detail_postingan = query("SELECT * FROM keluhan");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keluhan</title>
     <!-- style -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
 </head>
-<body>
+<body  class="bg-[url('BG.jpg')] bg-cover backdrop-blur-sm">
     <!-- header -->
      <?php 
-        include '../component/header-web.php';
+        include './component/header-web.php';
      ?>
     <!-- endheader -->
-    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold text-center mt-10">Keluhan</h1>
     <!-- main -->
-    <main class="container py-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold text-center mt-10">Keluhan</h1>
+    <main class="py-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3 ">
         <?php foreach ($detail_postingan as $post) : ?>
-            <div class="bg-white dark:bg-gray-200 shadow-md rounded-lg py-5 px-5">
+            <div class="bg-white dark:bg-gray-200 shadow-md rounded-lg py-5 px-5 mx-5">
                     <h1 class="text-lg text-gray-900 font-medium mb-1">Pengirim : <strong><?= $post['pengirim'] ?></strong></h1>
                 <article class="border-t border-gray-300">
                         <div class="bg-white dark:bg-gray-200 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-2 sm:px-6">
@@ -46,7 +46,7 @@ $detail_postingan = query("SELECT * FROM keluhan");
     <!-- endmain -->
     <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>
