@@ -88,7 +88,7 @@ if( isset($_POST["cari"])){
     <!-- endmain -->
     <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>
