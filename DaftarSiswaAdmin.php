@@ -1,6 +1,6 @@
 <?php 
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
 // mengambil data dari function query dan menyimpan kedalam $mahasiswa
 $mahasiswa = query("SELECT * FROM XIrpl");
@@ -22,7 +22,7 @@ if( isset($_POST["cari"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DaftarSiswa</title>
     <!-- style -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
     <!-- endstyle -->
 
     <!-- script -->

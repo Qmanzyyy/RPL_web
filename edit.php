@@ -8,7 +8,7 @@ $id = $_GET['id'];
 
 // query data mahasiswa sesuai dengan id
 $mhs = query("SELECT * FROM XIrpl WHERE id = '$id'")[0];
-var_dump($mhs);
+
 
 // mengecek tombol submit sudah di tekan atau belum
 if (isset($_POST['submit'])) {
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
     <title>Tambah Data Siswa</title>
 
     <!-- stylecss tailwind -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
 
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!-- php -->
 <?php 
 // menghubungkan halaman ke functionn-
-require '../function/function.php';
+require './function/function.php';
 
 // mengecek tombol submit sudah di tekan atau belum
 if (isset($_POST["submit"])) {
@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
     <title>Tambah Data Mahasiswa</title>
 
     <!-- stylecss tailwind -->
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="./output.css">
 
 </head>
 <body>

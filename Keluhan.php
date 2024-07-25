@@ -21,7 +21,7 @@ $detail_postingan = query("SELECT * FROM keluhan ORDER BY created_at DESC");
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
 </head>
-<body  class="bg-[url('BG.jpg')] bg-cover backdrop-blur-sm">
+<body  class="bg-gray-800 text-white">
     <!-- header -->
      <?php 
         include './component/header-web.php';

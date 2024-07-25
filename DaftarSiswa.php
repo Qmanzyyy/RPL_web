@@ -9,6 +9,18 @@ $mahasiswa = query("SELECT * FROM XIrpl ORDER BY nama ASC");
 if( isset($_POST["cari"])){
     $mahasiswa = cari($_POST["keyword"]);
 }
+// tombol sortir kelas ditekan
+if (isset($_POST["sortirx"])) {
+    $mahasiswa = cari($_POST["numberx"]);
+}
+// tombol sortir kelas ditekan
+if (isset($_POST["sortirxi"])) {
+    $mahasiswa = cari($_POST["numberxi"]);
+}
+// tombol sortir kelas ditekan
+if (isset($_POST["sortirxii"])) {
+    $mahasiswa = cari($_POST["numberxii"]);
+}
 
 
 ?>
@@ -44,9 +56,24 @@ if( isset($_POST["cari"])){
     <!-- wrapper -->
     <!-- search -->
     <form action="" method="post" class="flex items-center justify-center">
-        <input type="text" name="keyword" class="border p-1 rounded-md" autofocus autocomplete="off" placeholder="Masukkan Kata Kunci">
+        <input type="text" name="keyword" class="border p-1 rounded-md text-black" autofocus autocomplete="off" placeholder="Masukkan Kata Kunci">
         <button type="submit" name="cari" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500">Cari!</button>
     </form>
+    <h1>sortir kelas</h1>
+    <div class="flex">
+        <form action="" method="post">
+            <button type="submit" name="sortirx" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500 mx-1">10</button>
+            <input type="hidden" name="numberx" value="10 rpl">
+        </form>
+        <form action="" method="post">
+            <button type="submit" name="sortirxi" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500 mx-1">11</button>
+            <input type="hidden" name="numberxi" value="11 rpl">
+        </form>
+        <form action="" method="post">
+            <button type="submit" name="sortirxii" class="px-6 py-2 bg-black text-white font-medium rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-violet-500 mx-1">12</button>
+            <input type="hidden" name="numberxii" value="12 rpl">
+        </form>
+    </div>
     <!-- endsearch -->
     <div class="flex flex-col items-center">
 
@@ -85,7 +112,7 @@ if( isset($_POST["cari"])){
     <!-- endmain -->
     <!-- footer -->
      <?php 
-        include '../component/footer.php'
+        include './component/footer.php'
      ?>
     <!-- endfooter -->
 </body>
