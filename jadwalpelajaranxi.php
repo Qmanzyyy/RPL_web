@@ -23,7 +23,7 @@
     <main class="flex items-center justify-center backdrop-blur-sm">
         <div>
         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-serif text-center mt-10">Jadwal Kelas 11 RPL</h1>
-        <img src="./xirpl.jpeg" alt="">
+        <img src="./xirpl.jpeg" alt="" class="h-[500px] w-[700px]">
         </div>
     </main>
     <!-- endmain -->

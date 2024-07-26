@@ -1326,6 +1326,22 @@ input:checked + .toggle-bg {
   height: 100svh;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1360,6 +1376,18 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[700px\] {
+  width: 700px;
 }
 
 .max-w-screen-xl {
