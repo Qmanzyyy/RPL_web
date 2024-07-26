@@ -32,7 +32,7 @@ if( isset($_POST["cari"])){
 <body class="">
     <!-- header -->
      <?php 
-        include '../component/header-web.php';
+        include './component/header-web.php';
      ?>
     <!-- endheader -->
 

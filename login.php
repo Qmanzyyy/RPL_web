@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPlsite</title>
     <!-- style -->
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./output.css">
     <style>
         #video-background {
             position: absolute;
@@ -20,24 +20,18 @@
     <!-- endstyle -->
 
     <!-- script -->
-    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- endscript -->
      
 </head>
 
-<body class="h-screen">
+<body class=" w-full h-full bg-[url('BG.jpg')] bg-cover">
     <!-- header -->
     <?php include './component/header-web.php'; ?>
     <!-- endheader -->
 
     <!-- main -->
     <main class="relative w-full h-full text-white">
-        <!-- bgvideo -->
-        <video id="video-background" class="-z-10 object-cover w-full h-full top-0 left-0 " autoplay muted loop >
-            <source src="../Background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <!-- endbgvideo -->
         <div class="flex flex-col items-center justify-center h-full backdrop-blur-sm">
             <div class="h-screen flex flex-col items-center justify-center">
                 <form action='index.php' method='POST'>
