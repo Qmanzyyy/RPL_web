@@ -106,5 +106,62 @@ function bahtam($bahtam) {
 }
 
 
+function change($edit) {
+    global $conn;
+
+    $id = $edit["id"];
+    $nama = htmlspecialchars($edit["nama"]);
+    $kelas = htmlspecialchars($edit["kelas"]);
+
+   $gambar = upload();
+   if( !$gambar){
+    return false;
+   }
+   
+
+    $query = "UPDATE XIrpl SET
+              nama = '$nama',
+              kelas = '$kelas',
+              gambar = '$gambar'
+              WHERE id = '$id'";
+
+    $result = mysqli_query($conn, $query);
+    
+    if (!$result) {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    return mysqli_affected_rows($conn);
+}
+
+function upload(){
+    
+    $namafile = $_FILES['gambar']['name'];
+    $ukuranfile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpname = $_FILES['gambar']['gambar'];
+
+    $eksistensivalid = ['jpg','png','jpeg'];
+    $eksistensi = explode('.' , $namafile);
+    $eksistensi = strtolower(end($eksistensi));
+    if( !in_array($eksistensi , $eksistensivalid)){
+        echo "
+        <script>
+            alert('yang and aupload bukan gambar');
+            document.location.href = 'DaftarSiswa.php';
+        </script>
+        ";
+        return false;
+    }
+    $namafilebaru = uniqid();
+    $namafilebaru .= '.';
+    $namafilebaru .= $eksistensi;
+
+    move_uploaded_file($tmpname, 'uploads/' .$namafilebaru);
+
+    return $namafilebaru;
+
+
+   }
 
 ?>

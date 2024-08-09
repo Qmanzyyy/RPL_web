@@ -1,5 +1,5 @@
-<nav class=" z-30">
-
+<nav class="relative w-full z-50">
+<div class="fixed w-full">
    <header class="bg-black flex justify-between items-center sm:p-10 sm:py-0 px-4">
        <div>
            <a href="./index.php"><span class="text-white font-extrabold">RPlsite</span></a>
@@ -99,6 +99,7 @@
             </li>
          </ul>
       </div>
+   </div>
    </div>
 </nav>
 
